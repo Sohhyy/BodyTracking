@@ -55,7 +55,7 @@ export class AvatarRenderer extends PoseRenderer {
         scene.environment = environment;
         // Text model
         const font = await new FontLoader().loadAsync("font.json");
-        const geometry = new TextGeometry("HOORAY!!!", {
+        const geometry = new TextGeometry("LOCO7!!!", {
             font: font, size: 5, height: 2,
             bevelSize: 0.3, bevelThickness: 1,
             bevelSegments: 10, bevelEnabled: true
