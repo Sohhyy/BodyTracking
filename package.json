@@ -5,8 +5,9 @@
   "title": "Pose Tracking Demo",
   "description": "Geenee pose tracking demo",
   "dependencies": {
-    "three": "^0.143.0",
-    "@geenee/bodyrenderers-three": "^0.3.1"
+    "@geenee/bodyrenderers-three": "^0.3.1",
+    "express": "^4.18.2",
+    "three": "^0.143.0"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5",
