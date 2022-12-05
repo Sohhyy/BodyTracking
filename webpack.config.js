@@ -59,14 +59,6 @@ module.exports = (_, argv) => {
     }
     else {
         config.mode = "production";
-        config.devServer = {
-            compress: true,
-            inline: true,
-            port: '8080',
-            allowedHosts: [
-                'loco7.onrender.com'
-            ]
-        },
         config.optimization = {
             minimize: true,
             minimizer: [new TerserPlugin({
