@@ -8,8 +8,7 @@ const pkg = require("./package.json");
 var config = {
     entry: './src/index.ts',
     devServer: {
-        compress: true,
-        disableHostCheck: true,   // That solved it
+        allowedHosts: "all",
 
     },
     module: {
