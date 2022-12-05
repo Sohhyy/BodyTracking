@@ -7,7 +7,7 @@ import "./index.css";
 // Engine
 const engine = new PoseEngine();
 const token = location.hostname === "localhost" ?
-    "rOlje0dxIVTYk6ZtyuJFOKQG1gM4p2EA" : "ZHKhq-Q5SiR71oX-rEf9PO4DS1iMGUpb";
+    "rOlje0dxIVTYk6ZtyuJFOKQG1gM4p2EA" : "U-iLrA268iYPXvcwI2kUgJZeps2JkW2I";
 
 // Parameters
 const urlParams = new URLSearchParams(window.location.search);
