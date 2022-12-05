@@ -60,7 +60,12 @@ module.exports = (_, argv) => {
     else {
         config.mode = "production";
         config.devServer = {
-            disableHostCheck: true,
+            compress: true,
+            inline: true,
+            port: '8080',
+            allowedHosts: [
+                'loco7.onrender.com'
+            ]
         },
         config.optimization = {
             minimize: true,
