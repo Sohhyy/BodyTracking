@@ -31,7 +31,7 @@
   "scripts": {
     "start": "webpack serve --mode=development",
     "start:https": "webpack serve --mode=development --https",
-    "build": "webpack build --mode=production",
+    "build": "CI='' webpack build --mode=production",
     "serve": "serve -p 3000 -s build",
     "postinstall": "npm run post:wasm",
     "post:wasm": "copyfiles -f \"node_modules/@geenee/bodytracking/dist/*.wasm\" public/"
