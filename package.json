@@ -29,7 +29,7 @@
     "webpack-dev-server": "^4.7.3"
   },
   "scripts": {
-    "start": "webpack serve --mode=production",
+    "start": "webpack serve --mode=development",
     "start:https": "webpack serve --mode=development --https",
     "build": "webpack build --mode=production",
     "serve": "serve -p 3000 -s build",
