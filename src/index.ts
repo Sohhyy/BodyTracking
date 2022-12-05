@@ -27,7 +27,7 @@ const modelMap: {
         }
     },
     jacket: {
-        file: "PinkyFinal3.glb", avatar: false,
+        file: "PinkyFinal4.glb", avatar: false,
         outfit: {
             //occluders: [/Head$/, /Body/],
             //hidden: [/Eye/, /Teeth/, /Bottom/, /Footwear/, /Glasses/]
