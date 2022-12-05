@@ -8,7 +8,9 @@ const pkg = require("./package.json");
 var config = {
     entry: './src/index.ts',
     devServer: {
-        allowedHosts: "all",
+        allowedHosts: [
+            'loco7.onrender.com',
+        ]
 
     },
     module: {
