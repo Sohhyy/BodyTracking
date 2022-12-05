@@ -60,9 +60,7 @@ module.exports = (_, argv) => {
     else {
         config.mode = "production";
         config.devServer = {
-            allowedHosts: [
-                'loco7.onrender.com',
-            ]
+            allowedHosts: "all"
         },
         config.optimization = {
             minimize: true,
