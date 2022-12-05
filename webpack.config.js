@@ -60,7 +60,7 @@ module.exports = (_, argv) => {
     else {
         config.mode = "production";
         config.devServer = {
-            allowedHosts: "all"
+            disableHostCheck: true,
         },
         config.optimization = {
             minimize: true,
