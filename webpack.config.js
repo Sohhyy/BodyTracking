@@ -7,12 +7,7 @@ const pkg = require("./package.json");
 
 var config = {
     entry: './src/index.ts',
-    devServer: {
-        allowedHosts: [
-            'loco7.onrender.com',
-        ]
 
-    },
     module: {
         rules: [
             {
@@ -64,6 +59,11 @@ module.exports = (_, argv) => {
     }
     else {
         config.mode = "production";
+        config.devServer = {
+            allowedHosts: [
+                'loco7.onrender.com',
+            ]
+        },
         config.optimization = {
             minimize: true,
             minimizer: [new TerserPlugin({
