@@ -82,13 +82,23 @@ async function main() {
         recordButton.onclick = () => {
             if (audio.paused) {
                 audio.play();
-                recordButton.style.backgroundImage = "url('switch.png')";
+                recordButton.style.backgroundImage = "url('VolumeGIF.gif')";
             } else {
                 audio.pause();
                 recordButton.style.backgroundImage = "url('snapshot.png')";
             }
             ;
         };
+    }
+
+    //Info
+
+    const  infoButton = document.getElementById(
+        "info") as HTMLButtonElement | null;
+    if(infoButton){
+        infoButton.onclick = () =>{
+            window.open('#openModal', '_self')
+        }
     }
 
 

@@ -64,6 +64,19 @@ input.avatar-switch[type="checkbox"] {
     border: none;
 }
 
+.info {
+    position: absolute;
+    width: 48px;
+    height: 48px;
+    top: 8px;
+    left: 8px;
+    z-index: 1;
+    background-image: url("snapshot.png");
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
 .carousel {
     position: absolute;
     width: 100%;
@@ -232,5 +245,68 @@ input.avatar-switch[type="checkbox"] {
 @-webkit-keyframes spinner-dot-before {
   50% { -webkit-transform: scale(0.4); }
   100%, 0% { -webkit-transform: scale(1.0); }
+}
+
+.modalDialog {
+    position: absolute;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 99999;
+    opacity:0;
+    -webkit-transition: opacity 400ms ease-in;
+    -moz-transition: opacity 400ms ease-in;
+    transition: opacity 400ms ease-in;
+    pointer-events: none;
+
+
+}
+.modalDialog:target {
+    opacity:1;
+    pointer-events: auto;
+}
+.modalDialog > div {
+    width: 80vw;
+    height: 80vh;
+    position: relative;
+    margin: 5% auto;
+    padding: 5px 5px 5px 5px;
+    border-radius: 1px;
+    background: #fff;
+    background: -moz-linear-gradient(#fff, #999);
+    background: -webkit-linear-gradient(#fff, #999);
+    background: -o-linear-gradient(#fff, #999);
+    overflow-y: scroll;
+    overflow-x: hidden;
+
+    background-image: url('InfoBackground.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110% 110%;
+}
+.close {
+
+    height: 50px;
+    position: absolute;
+    right: 50px;
+    text-align: center;
+    top: 50px;
+    width: 50px;
+    text-decoration: none;
+    font-weight: bold;
+
+
+    z-index: 50;
+
+    background-image: url('Close.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 110% 110%;
+}
+.close:hover {
+
 }
 

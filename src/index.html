@@ -9,13 +9,19 @@
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="openModal" class="modalDialog"><a href="#close" title="Close" class="close"></a>
+      <div>
+        <img src="MasksInfo.png" alt="It" style="width:100%">
+      </div>
+    </div>
     <div id="root" class="full-screen"></div>
     <button id="camera-switch" class="camera-switch"></button>
-    <audio id="audioplayer" autoplay loop>
+    <audio id="audioplayer" loop>
       <source src="SalsaMusic.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
     <button id="record" class="record"></button>
+    <button id="info" class="info"></button>
     <div id="dots" class="dots full-screen">
         <div class="pulse1"></div>
         <div class="pulse2"></div>
