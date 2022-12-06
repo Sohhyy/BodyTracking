@@ -20,19 +20,12 @@ const modelMap: {
     }
 } = {
     onesie: {
-        file: "onesie.glb", avatar: false,
+        file: "PinkyFinal4.glb", avatar: false,
         outfit: {
             occluders: [/Head$/, /Body/],
             hidden: [/Eye/, /Teeth/, /Footwear/]
         }
     },
-    jacket: {
-        file: "PinkyFinal4.glb", avatar: false,
-        outfit: {
-            //occluders: [/Head$/, /Body/],
-            //hidden: [/Eye/, /Teeth/, /Bottom/, /Footwear/, /Glasses/]
-        }
-    }
 }
 let model = "onesie";
 let avatar = modelMap["onesie"].avatar;
@@ -74,69 +67,31 @@ async function main() {
             cameraSwitch.disabled = false;
         }
     }
-    // Outfit switch
-    const outfitSwitch = document.getElementById(
-        "outfit-switch") as HTMLInputElement;
-    outfitSwitch.checked = avatar;
-    outfitSwitch.onchange = async () => {
-        modelBtns.forEach((btn) => { btn.disabled = true; })
-        outfitSwitch.disabled = true;
-        const spinner = createSpinner();
-        document.body.appendChild(spinner);
-        avatar = outfitSwitch.checked;
-        await renderer.setOutfit(
-            modelMap[model].file,
-            avatar ? undefined : modelMap[model].outfit);
-        document.body.removeChild(spinner);
-        modelBtns.forEach((btn) => { btn.disabled = false; });
-        outfitSwitch.disabled = false;
-    }
+
     // Recorder
-    const safari = navigator.userAgent.indexOf('Safari') > -1 &&
-                   navigator.userAgent.indexOf('Chrome') <= -1
-    const ext = safari ? "mp4" : "webm";
-    const recorder = new Recorder(renderer, "video/" + ext);
+
+
+    // Music
     const recordButton = document.getElementById(
         "record") as HTMLButtonElement | null;
-    if (recordButton)
+    const audio = document.getElementById(
+        "audioplayer") as HTMLAudioElement | null;
+
+
+    if (recordButton && audio) {
         recordButton.onclick = () => {
-            recorder?.start();
-            setTimeout(async () => {
-                const blob = await recorder?.stop();
-                if (!blob)
-                    return;
-                const url = URL.createObjectURL(blob);
-                const link = document.createElement("a");
-                link.hidden = true;
-                link.href = url;
-                link.download = "capture." + ext;
-                link.click();
-                link.remove();
-                URL.revokeObjectURL(url);
-            }, 10000);
-        };
-    // Model carousel
-    const modelBtns = document.getElementsByName(
-        "model") as NodeListOf<HTMLInputElement>;
-    modelBtns.forEach((btn) => {
-        btn.onchange = async () => {
-            if (btn.checked && modelMap[btn.value]) {
-                modelBtns.forEach((btn) => { btn.disabled = true; })
-                outfitSwitch.disabled = true;
-                const spinner = createSpinner();
-                document.body.appendChild(spinner);
-                model = btn.value;
-                avatar = modelMap[model].avatar;
-                await renderer.setOutfit(
-                    modelMap[model].file,
-                    avatar ? undefined : modelMap[model].outfit);
-                outfitSwitch.checked = avatar;
-                document.body.removeChild(spinner);
-                modelBtns.forEach((btn) => { btn.disabled = false; });
-                outfitSwitch.disabled = false;
+            if (audio.paused) {
+                audio.play();
+                recordButton.style.backgroundImage = "url('switch.png')";
+            } else {
+                audio.pause();
+                recordButton.style.backgroundImage = "url('snapshot.png')";
             }
+            ;
         };
-    });
+    }
+
+
     // Initialization
     await Promise.all([
         engine.addRenderer(renderer),

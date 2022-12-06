@@ -55,8 +55,8 @@ input.avatar-switch[type="checkbox"] {
     position: absolute;
     width: 48px;
     height: 48px;
-    top: 8px;
-    left: 8px;
+    top: 64px;
+    right: 8px;
     z-index: 1;
     background-image: url("snapshot.png");
     background-size: contain;
