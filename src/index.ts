@@ -31,20 +31,7 @@ let model = "onesie";
 let avatar = modelMap["onesie"].avatar;
 
 // Create spinner element
-function createSpinner() {
-    const container = document.createElement("div");
-    container.className = "spinner-container";
-    container.id = "spinner";
-    const spinner = document.createElement("div");
-    spinner.className = "spinner";
-    for (let i = 0; i < 6; i++) {
-        const dot = document.createElement("div");
-        dot.className = "spinner-dot";
-        spinner.appendChild(dot);
-    }
-    container.appendChild(spinner);
-    return container;
-}
+
 
 async function main() {
     // Renderer
