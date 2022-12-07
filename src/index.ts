@@ -36,6 +36,7 @@ let avatar = modelMap["onesie"].avatar;
 async function main() {
     // Renderer
     const container = document.getElementById("root");
+    let front = true;
     if (!container)
         return;
     const renderer = new AvatarRenderer(
@@ -46,6 +47,14 @@ async function main() {
         "camera-switch") as HTMLButtonElement | null;
     if (cameraSwitch) {
         cameraSwitch.onclick = async () => {
+            if(front){
+                cameraSwitch.style.backgroundImage = "url('BackCam.png')";
+                front = false;
+            }
+            else{
+                front = true;
+                cameraSwitch.style.backgroundImage = "url('FrontCam.png')";
+            }
             cameraSwitch.disabled = true;
             rear = !rear;
             await engine.setup({ size: { width: 1920, height: 1080 }, rear });
@@ -69,10 +78,10 @@ async function main() {
         recordButton.onclick = () => {
             if (audio.paused) {
                 audio.play();
-                recordButton.style.backgroundImage = "url('VolumeGIF.gif')";
+                recordButton.style.backgroundImage = "url('MusicOn.png')";
             } else {
                 audio.pause();
-                recordButton.style.backgroundImage = "url('snapshot.png')";
+                recordButton.style.backgroundImage = "url('MusicOff.png')";
             }
             ;
         };

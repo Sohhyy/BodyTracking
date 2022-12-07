@@ -23,7 +23,7 @@ code {
     top: 8px;
     right: 8px;
     z-index: 1;
-    background-image: url("switch.png");
+    background-image: url("FrontCam.png");
     background-size: contain;
     background-color: transparent;
     border: none;
@@ -55,10 +55,10 @@ input.avatar-switch[type="checkbox"] {
     position: absolute;
     width: 48px;
     height: 48px;
-    top: 64px;
-    right: 8px;
+    top: 8px;
+    right: 56px;
     z-index: 1;
-    background-image: url("snapshot.png");
+    background-image: url("MusicOff.png");
     background-size: contain;
     background-color: transparent;
     border: none;
@@ -66,12 +66,12 @@ input.avatar-switch[type="checkbox"] {
 
 .info {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 84px;
+    height: 38px;
     top: 8px;
     left: 8px;
     z-index: 1;
-    background-image: url("snapshot.png");
+    background-image: url("InfoButton.png");
     background-size: contain;
     background-color: transparent;
     border: none;
@@ -114,7 +114,7 @@ input.avatar-switch[type="checkbox"] {
   justify-content: center;
   align-items: center;
 /*background-image: linear-gradient(45deg, #709dff 0%, #91fdb7 100%);*/
-    background-image: url('MaskPlaybill.png');
+    background-image: url('Loco7Playbill.png');
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
