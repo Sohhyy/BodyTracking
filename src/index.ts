@@ -20,7 +20,7 @@ const modelMap: {
     }
 } = {
     onesie: {
-        file: "PinkyFinal4.glb", avatar: false,
+        file: "PinkyNewTexture.glb", avatar: false,
         outfit: {
             occluders: [/Head$/, /Body/],
             hidden: [/Eye/, /Teeth/, /Footwear/]
