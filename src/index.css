@@ -18,12 +18,25 @@ code {
 
 .camera-switch {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     top: 8px;
     right: 8px;
     z-index: 1;
     background-image: url("FrontCam.png");
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
+.cameraTip {
+    position: absolute;
+    width: 220px;
+    height: 232px;
+    top: 56px;
+    right: 0px;
+    z-index: 1;
+    background-image: url("CameraTip.png");
     background-size: contain;
     background-color: transparent;
     border: none;
@@ -53,10 +66,10 @@ input.avatar-switch[type="checkbox"] {
 
 .record {
     position: absolute;
-    width: 48px;
-    height: 48px;
+    width: 60px;
+    height: 60px;
     top: 8px;
-    right: 56px;
+    right: 68px;
     z-index: 1;
     background-image: url("MusicOff.png");
     background-size: contain;
@@ -64,14 +77,59 @@ input.avatar-switch[type="checkbox"] {
     border: none;
 }
 
+.musicTip {
+    position: absolute;
+    width: 200px;
+    height: 128px;
+    top: 56px;
+    right: 50px;
+    z-index: 1;
+    background-image: url("MusicTip.png");
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
 .info {
     position: absolute;
-    width: 84px;
-    height: 38px;
+    width: 168px;
+    height: 76px;
     top: 8px;
     left: 8px;
     z-index: 1;
     background-image: url("InfoButton.png");
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
+.infoTip {
+    position: absolute;
+    width: 240px;
+    height: 152px;
+    bottom: 200px;
+    left: 100px;
+
+    z-index: 1;
+    background-image: url("StepBackTip.png");
+    background-size: contain;
+    background-color: transparent;
+    border: none;
+}
+
+.gotButton {
+
+    width: 168px;
+    height: 76px;
+
+    margin: 0;
+    position: absolute;
+    bottom: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    z-index: 1;
+    background-image: url("Gotit.png");
     background-size: contain;
     background-color: transparent;
     border: none;

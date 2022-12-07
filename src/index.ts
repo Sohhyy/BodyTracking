@@ -96,6 +96,31 @@ async function main() {
             window.open('#openModal', '_self')
         }
     }
+    //got button
+
+    const  gotButton = document.getElementById(
+        "got") as HTMLButtonElement | null;
+    const  tip1 = document.getElementById(
+        "cameraTip") as HTMLDivElement | null;
+    const  tip2 = document.getElementById(
+        "musicTip") as HTMLDivElement | null;
+    const  tip3 = document.getElementById(
+        "infoTip") as HTMLDivElement | null;
+    if(gotButton && tip1&&tip2&&tip3){
+        gotButton.onclick = () =>{
+            gotButton.style.display = 'none';
+            tip1.style.display = 'none';
+            tip2.style.display = 'none';
+            tip3.style.display = 'none';
+            if(recordButton&&audio){
+                if (audio.paused) {
+                    audio.play();
+                    recordButton.style.backgroundImage = "url('MusicOn.png')";
+                }
+            }
+
+        }
+    }
 
 
     // Initialization
