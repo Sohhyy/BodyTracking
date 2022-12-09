@@ -92,12 +92,12 @@ input.avatar-switch[type="checkbox"] {
 
 .info {
     position: absolute;
-    width: 168px;
-    height: 76px;
+    width: 162px;
+    height: 57px;
     top: 8px;
-    left: 8px;
+    left: 0px;
     z-index: 1;
-    background-image: url("InfoButton.png");
+    background-image: url("MoreInfo.png");
     background-size: contain;
     background-color: transparent;
     border: none;
@@ -333,7 +333,7 @@ transform: translate(-50%, -50%);
 }
 .modalDialog > div {
 
-    height: 90%;
+    height: 80%;
     width: 80%;
     position: relative;
     margin: 5% auto;
@@ -356,7 +356,7 @@ transform: translate(-50%, -50%);
     background-image: url("InfoBackground.png");
     background-position: center;
     background-repeat: no-repeat;
-    background-size: 80% 94.5%;
+    background-size: 80% 85%;
     background-attachment:fixed
 }
 
@@ -365,7 +365,7 @@ transform: translate(-50%, -50%);
     height: 90%;
     width: 100%;
     position: relative;
-    margin: 5% auto;
+    margin: 13% auto;
 
     border-radius: 1px;
 
@@ -383,9 +383,9 @@ transform: translate(-50%, -50%);
 
     height: 50px;
     position: absolute;
-    right: 40px;
+    right: 30px;
     text-align: center;
-    top: 20px;
+    top: 30px;
     width: 50px;
     text-decoration: none;
     font-weight: bold;
